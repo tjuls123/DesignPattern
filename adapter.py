@@ -40,3 +40,12 @@ class Adapter(Target, Adaptee):
 		return self.specific_request()  # 调用已有的类接口
 
 
+"""对象适配器"""
+
+
+class  ObjectAdapter(Target):
+	def __init__(self):
+		self.adaptee = Adaptee()
+
+	def request(self):
+		return self.adaptee.specific_request()
